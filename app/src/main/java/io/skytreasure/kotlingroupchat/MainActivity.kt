@@ -1,7 +1,7 @@
 package io.skytreasure.kotlingroupchat
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import android.view.View
@@ -18,7 +18,7 @@ import io.skytreasure.kotlingroupchat.common.constants.NetworkConstants
 import io.skytreasure.kotlingroupchat.common.controller.NotifyMeInterface
 import io.skytreasure.kotlingroupchat.common.util.SharedPrefManager
 import com.google.firebase.database.DatabaseError
-import android.databinding.adapters.NumberPickerBindingAdapter.setValue
+import androidx.databinding.adapters.NumberPickerBindingAdapter.setValue
 import android.util.Log
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.ValueEventListener
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 var i = 0
                 for (group in DataConstants.sGroupMap!!) {
                     if (group.value.members.containsKey(sCurrentUser?.uid!!)) {
-                        i += group.value.members.get(sCurrentUser?.uid)?.unread_group_count!!
+                        i += group.value.members.get(sCurrentUser?.uid!!)?.unread_group_count!!
                     }
 
                 }

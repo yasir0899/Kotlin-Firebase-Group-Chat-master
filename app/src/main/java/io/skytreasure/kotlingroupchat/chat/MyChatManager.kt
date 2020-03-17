@@ -22,7 +22,7 @@ import io.skytreasure.kotlingroupchat.common.util.SecurePrefs
 import io.skytreasure.kotlingroupchat.common.util.SharedPrefManager
 import java.util.*
 import com.google.firebase.database.Transaction
-import android.databinding.adapters.NumberPickerBindingAdapter.setValue
+import androidx.databinding.adapters.NumberPickerBindingAdapter.setValue
 import android.provider.Settings
 import com.google.firebase.messaging.FirebaseMessaging
 import io.skytreasure.kotlingroupchat.common.constants.DataConstants

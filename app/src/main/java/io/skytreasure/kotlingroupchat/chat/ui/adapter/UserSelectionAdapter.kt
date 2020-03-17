@@ -1,8 +1,8 @@
 package io.skytreasure.kotlingroupchat.chat.ui.adapter
 
 import android.content.Context
-import android.support.v7.widget.AppCompatImageView
-import android.support.v7.widget.RecyclerView
+import androidx.appcompat.widget.AppCompatImageView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,7 +20,7 @@ import io.skytreasure.kotlingroupchat.common.util.loadRoundImage
  */
 class UserSelectionAdapter(context: Context, var callback: NotifyMeInterface) : RecyclerView.Adapter<UserSelectionAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder =
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
             ViewHolder(LayoutInflater.from(parent?.context).inflate(R.layout.item_selected_user, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

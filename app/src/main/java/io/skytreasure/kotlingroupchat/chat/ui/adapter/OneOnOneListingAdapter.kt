@@ -2,7 +2,7 @@ package io.skytreasure.kotlingroupchat.chat.ui.adapter
 
 import android.content.Context
 import android.content.Intent
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,7 +20,7 @@ import io.skytreasure.kotlingroupchat.common.util.loadRoundImage
 class OneOnOneListingAdapter(var context: Context) : RecyclerView.Adapter<UserRowViewHolder>() {
     var holderMap: MutableMap<String, UserRowViewHolder> = mutableMapOf()
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): UserRowViewHolder =
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserRowViewHolder =
             UserRowViewHolder(LayoutInflater.from(parent?.context).inflate(R.layout.item_user, parent, false))
 
     override fun onBindViewHolder(holder: UserRowViewHolder, position: Int) {

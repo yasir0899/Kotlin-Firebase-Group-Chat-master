@@ -6,16 +6,16 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.os.Handler
 import android.provider.MediaStore
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
-import android.support.v7.app.AlertDialog
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.text.format.DateFormat
 import android.util.Log
 import android.view.Gravity
@@ -463,7 +463,7 @@ class ChatMessagesActivity : AppCompatActivity(), View.OnClickListener {
 
 
         chat_messages_recycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
                 if (IsRecyclerViewAtTop() && newState == RecyclerView.SCROLL_STATE_IDLE) {
 
@@ -471,7 +471,7 @@ class ChatMessagesActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
 
-            override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
 
 
             }
@@ -484,13 +484,14 @@ class ChatMessagesActivity : AppCompatActivity(), View.OnClickListener {
         return if (chat_messages_recycler.getChildCount() == 0) true else chat_messages_recycler.getChildAt(0).getTop() == 0
     }
 
-    protected override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+    protected override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
 
         val storageRef = storage.getReferenceFromUrl(NetworkConstants.URL_STORAGE_REFERENCE).child(NetworkConstants.FOLDER_STORAGE_IMG)
 
         if (requestCode == IMAGE_GALLERY_REQUEST) {
             if (resultCode == RESULT_OK) {
-                val selectedImageUri = data.data
+                val selectedImageUri = data?.data
                 if (selectedImageUri != null) {
                     sendFileFirebase(storageRef, selectedImageUri)
                 } else {

@@ -1,9 +1,9 @@
 package io.skytreasure.kotlingroupchat.chat.ui.adapter
 
 import android.content.Context
-import android.databinding.DataBindingUtil
-import android.support.v4.content.ContextCompat
-import android.support.v7.widget.RecyclerView
+import androidx.databinding.DataBindingUtil
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.RecyclerView
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -76,7 +76,7 @@ class ChatMessagesRecyclerAdapter(var groupId: String, var context: Context, var
                       R.layout.item_chat_row, parent, false)
               )*/
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder =
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
             ViewHolder(LayoutInflater.from(parent?.context).inflate(R.layout.item_chat_row, parent, false))
 
 

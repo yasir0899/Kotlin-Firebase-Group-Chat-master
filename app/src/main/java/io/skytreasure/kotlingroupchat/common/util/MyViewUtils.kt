@@ -5,11 +5,11 @@ package io.skytreasure.kotlingroupchat.common.util
  */
 
 import android.content.Context
-import android.databinding.BindingAdapter
+import androidx.databinding.BindingAdapter
 import android.graphics.Bitmap
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.AppCompatImageView
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatImageView
 import android.view.View
 import android.widget.TextView
 import com.bumptech.glide.Glide

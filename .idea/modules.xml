@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Kotlin-Firebase-Group-Chat-master.iml" filepath="$PROJECT_DIR$/Kotlin-Firebase-Group-Chat-master.iml" group="Kotlin-Firebase-Group-Chat-master" />
+      <module fileurl="file://$PROJECT_DIR$/app/Kotlin-Firebase-Group-Chat-master-app.iml" filepath="$PROJECT_DIR$/app/Kotlin-Firebase-Group-Chat-master-app.iml" group="Kotlin-Firebase-Group-Chat-master/app" />
       <module fileurl="file://$PROJECT_DIR$/KotlinGroupChat.iml" filepath="$PROJECT_DIR$/KotlinGroupChat.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

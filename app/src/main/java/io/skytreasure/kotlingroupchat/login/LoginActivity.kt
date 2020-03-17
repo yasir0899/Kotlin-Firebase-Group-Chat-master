@@ -1,7 +1,7 @@
 package io.skytreasure.kotlingroupchat.login
 
 import android.app.ProgressDialog
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.google.android.gms.common.ConnectionResult
@@ -15,8 +15,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import android.content.Intent
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.auth.api.Auth
-import android.support.annotation.NonNull
-import android.support.v4.app.FragmentActivity
+import androidx.annotation.NonNull
+import androidx.fragment.app.FragmentActivity
 import android.util.Log
 import com.google.android.gms.common.api.ResultCallback
 import com.google.android.gms.common.api.Status
@@ -111,7 +111,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, GoogleApiClient
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 
-    public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+    public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
